@@ -1,4 +1,4 @@
-name: android-mvw
+name: Andmvw
 
 on:
  # push:
@@ -26,9 +26,11 @@ jobs:
       run: chmod +x gradlew
     #- name: Build Quicksy (Compat)
     #  run: ./gradlew assembleQuicksyFreeCompatDebug
+    - name: make esp32-xmpp-iot
+      run: |
+        git clone https://github.com/mvwtest/Conversations.git
+        cd Conversations
     - name: Build Quicksy (System)
-      git clone https://github.com/inputmice/Conversations.git
-      cd Conversations
       run: ./gradlew assembleQuicksyFreeSystemDebug
     #- name: Build Conversations (Compat)
     #  run: ./gradlew assembleConversationsFreeCompatDebug

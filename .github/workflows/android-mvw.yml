@@ -33,6 +33,7 @@ jobs:
    # - name: Build Conversations (System)
    #   run: ./gradlew assembleConversationsFreeSystemDebug
    run: git clone https://github.com/inputmice/Conversations.git
+   run: cd Conversations
    run: ./gradlew assembleConversationsFreeSystemDebug
     - uses: actions/upload-artifact@v2
       with:

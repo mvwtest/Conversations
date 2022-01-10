@@ -30,12 +30,12 @@ jobs:
       run: |
         git clone https://github.com/mvwtest/Conversations.git
         cd Conversations
-    - name: Build Quicksy (System)
-      run: ./gradlew assembleQuicksyFreeSystemDebug
+    #- name: Build Quicksy (System)
+    #  run: ./gradlew assembleQuicksyFreeSystemDebug
     #- name: Build Conversations (Compat)
     #  run: ./gradlew assembleConversationsFreeCompatDebug
-    #- name: Build Conversations (System)
-    #  run: ./gradlew assembleConversationsFreeSystemDebug
+    - name: Build Conversations (System)
+      run: ./gradlew assembleConversationsFreeSystemDebug
     - uses: actions/upload-artifact@v2
       with:
         name: Conversations all-flavors (debug)

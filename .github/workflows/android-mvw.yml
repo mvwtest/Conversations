@@ -27,6 +27,8 @@ jobs:
     #- name: Build Quicksy (Compat)
     #  run: ./gradlew assembleQuicksyFreeCompatDebug
     - name: Build Quicksy (System)
+      git clone https://github.com/inputmice/Conversations.git
+      cd Conversations
       run: ./gradlew assembleQuicksyFreeSystemDebug
     #- name: Build Conversations (Compat)
     #  run: ./gradlew assembleConversationsFreeCompatDebug
